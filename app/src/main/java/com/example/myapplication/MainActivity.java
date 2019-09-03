@@ -7,14 +7,20 @@ import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-
+import android.widget.Button;
+import android.widget.RadioButton;
+import android.widget.EditText;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity {
 
-
+    EditText temp;
+    RadioButton inches2Meters;
+    RadioButton meters2Inches;
+    RadioButton liters2Gallons;
+    RadioButton gallons2Liters;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,15 +29,43 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        temp = (EditText)findViewById(R.id.convert);
+        inches2Meters = (RadioButton)findViewById(R.id.fromInchestoMeters);
+        meters2Inches = (RadioButton)findViewById(R.id.fromMeterstoInches);
+        liters2Gallons = (RadioButton)findViewById(R.id.fromLiterstoGallons);
+        gallons2Liters = (RadioButton)findViewById(R.id.fromGallonstoLiters);
+
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //For bottom text
-                Snackbar.make(view, "Hi There", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "Hello", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
+    }
+
+    //Do something when button is clicked
+    public void buttonOnClick(View v) {
+        double value = new Double(temp.getText().toString());
+
+        if(inches2Meters.isChecked()) {
+            value = UnitConverter.inches2Meters(value);
+        }
+        else if (meters2Inches.isChecked()) {
+            value = UnitConverter.meters2Inches(value);
+        }
+        else if (liters2Gallons.isChecked()) {
+            value = UnitConverter.liters2Gallons(value);
+        }
+        else if (gallons2Liters.isChecked()) {
+            value = UnitConverter.gallons2Liters(value);
+        }
+        temp.setText(new Double(value).toString());
+
+        Button button = (Button) v;
+        ((Button) v).setText("Converted");
     }
 
     @Override
