@@ -1,12 +1,20 @@
 package com.example.myapplication;
 
 public class UnitConverter {
-    public static double celsius2Farenheit(double f) {
-        return (f - 32) * 5 / 9;
+    public static double inches2Meters(double i) {
+        return i / 39.37;
     }
 
-    public static double farenheit2Celcius(double c) {
-        return 32 + c * 9 / 5;
+    public static double meters2Inches(double m) {
+        return m * 39.37;
+    }
+
+    public static double liters2Gallons(double l) {
+        return l / 3.785;
+    }
+
+    public static double gallons2Liters(double g) {
+        return g * 3.785;
     }
 
 }
