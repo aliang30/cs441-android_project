@@ -25,40 +25,43 @@
         app:layout_constraintTop_toTopOf="parent">
 
 
-        <Button
-            android:id="@+id/button"
-            android:layout_width="110dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginEnd="120dp"
-            android:layout_marginRight="100dp"
-            android:layout_marginBottom="200dp"
-            android:onClick="buttonOnClick"
-            android:text="Convert" />
 
 
     </LinearLayout>
 
     <RadioGroup
-
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:id="@+id/radioGroup" >
 
-
         <EditText
             android:id="@+id/convert"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:hint="Enter Number to Convert"
             android:inputType="numberDecimal"
             android:textAllCaps="false"
             android:textColor="#effeff"
             android:textSize="24sp" />
+
+        <RadioButton
+            android:id="@+id/fromInchestoFeet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_weight="1"
+            android:text="Inches to Feet"
+            android:textColor="#effeff"/>
+
+        <RadioButton
+            android:id="@+id/fromFeettoInches"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_weight="1"
+            android:text="Feet to Inches"
+            android:textColor="#effeff"/>
 
         <RadioButton
             android:id="@+id/fromInchestoMeters"
@@ -93,6 +96,21 @@
             android:layout_weight="1"
             android:text="Gallons to Liters"
             android:textColor="#effeff"/>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:background="#ECE4D2"
+            android:foreground="?attr/actionBarItemBackground"
+            android:onClick="buttonOnClick"
+            android:shadowColor="#00C04F4F"
+            android:text="Convert"
+            android:textColor="@android:color/black" />
+
 
     </RadioGroup>
 

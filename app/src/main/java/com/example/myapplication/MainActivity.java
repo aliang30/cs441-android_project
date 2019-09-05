@@ -21,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
     RadioButton meters2Inches;
     RadioButton liters2Gallons;
     RadioButton gallons2Liters;
+    RadioButton inches2Feet;
+    RadioButton feet2Inches;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
         meters2Inches = (RadioButton)findViewById(R.id.fromMeterstoInches);
         liters2Gallons = (RadioButton)findViewById(R.id.fromLiterstoGallons);
         gallons2Liters = (RadioButton)findViewById(R.id.fromGallonstoLiters);
+        inches2Feet = (RadioButton)findViewById(R.id.fromInchestoFeet);
+        feet2Inches = (RadioButton)findViewById(R.id.fromFeettoInches);
 
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -62,10 +66,17 @@ public class MainActivity extends AppCompatActivity {
         else if (gallons2Liters.isChecked()) {
             value = UnitConverter.gallons2Liters(value);
         }
+        else if (inches2Feet.isChecked()) {
+            value = UnitConverter.inches2feet(value);
+        }
+        else if (feet2Inches.isChecked()) {
+            value = UnitConverter.feet2inches(value);
+        }
+
         temp.setText(new Double(value).toString());
 
         Button button = (Button) v;
-        ((Button) v).setText("Converted");
+        ((Button) v).setText("Convert");
     }
 
     @Override

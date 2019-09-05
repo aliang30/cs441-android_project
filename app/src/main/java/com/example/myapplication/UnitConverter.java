@@ -17,4 +17,12 @@ public class UnitConverter {
         return g * 3.785;
     }
 
+    public static double inches2feet(double i) {
+        return i / 12;
+    }
+
+    public static double feet2inches(double f) {
+        return f * 12;
+    }
+
 }
