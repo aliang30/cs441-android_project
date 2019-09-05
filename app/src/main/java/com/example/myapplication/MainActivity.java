@@ -23,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
     RadioButton gallons2Liters;
     RadioButton inches2Feet;
     RadioButton feet2Inches;
+    RadioButton pounds2Kilos;
+    RadioButton kilos2Pounds;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +40,8 @@ public class MainActivity extends AppCompatActivity {
         gallons2Liters = (RadioButton)findViewById(R.id.fromGallonstoLiters);
         inches2Feet = (RadioButton)findViewById(R.id.fromInchestoFeet);
         feet2Inches = (RadioButton)findViewById(R.id.fromFeettoInches);
+        pounds2Kilos = (RadioButton)findViewById(R.id.fromPoundstoKilos);
+        kilos2Pounds = (RadioButton)findViewById(R.id.fromKilostoPounds);
 
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -71,6 +75,12 @@ public class MainActivity extends AppCompatActivity {
         }
         else if (feet2Inches.isChecked()) {
             value = UnitConverter.feet2inches(value);
+        }
+        else if (pounds2Kilos.isChecked()) {
+            value = UnitConverter.pounds2kilograms(value);
+        }
+        else if (kilos2Pounds.isChecked()) {
+            value = UnitConverter.kilograms2pounds(value);
         }
 
         temp.setText(new Double(value).toString());

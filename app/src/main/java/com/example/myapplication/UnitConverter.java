@@ -25,4 +25,13 @@ public class UnitConverter {
         return f * 12;
     }
 
+    public static double pounds2kilograms(double p) {
+        return p / 2.205;
+    }
+
+    public static double kilograms2pounds(double k) {
+        return k * 2.205;
+    }
+
+
 }

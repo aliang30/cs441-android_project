@@ -3,5 +3,4 @@
 <resources>
     <string name = "app_name"> Unit Converter </string>
     <string name = "main_activity_title"> Main Activity Title </string>
-
 </resources>
