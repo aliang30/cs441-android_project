@@ -27,7 +27,7 @@
 
         <Button
             android:id="@+id/button"
-            android:layout_width="150dp"
+            android:layout_width="107dp"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
@@ -42,21 +42,24 @@
             android:textColor="@android:color/black"
             android:textSize="14sp"
             android:textStyle="bold"
-            android:typeface="serif"/>
+            android:typeface="serif" />
 
 
     </LinearLayout>
+
 
     <RadioGroup
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
+        android:gravity="right"
         android:id="@+id/radioGroup" >
 
         <EditText
             android:id="@+id/convert"
-            android:layout_width="401dp"
-            android:layout_height="wrap_content"
+            android:layout_width="352dp"
+            android:layout_height="60dp"
+            android:gravity="left"
             android:hint="Enter Number to Convert"
             android:inputType="numberDecimal"
             android:textAllCaps="false"
@@ -85,7 +88,7 @@
 
         <RadioButton
             android:id="@+id/fromInchestoMeters"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:checked="false"
             android:text="Inches to Meters"
@@ -94,7 +97,7 @@
 
         <RadioButton
             android:id="@+id/fromMeterstoInches"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Meters to Inches"
@@ -122,7 +125,7 @@
 
         <RadioButton
             android:id="@+id/fromPoundstoKilos"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Pounds to Kilograms"
@@ -131,12 +134,13 @@
 
         <RadioButton
             android:id="@+id/fromKilostoPounds"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Kilograms to Pounds"
             android:typeface="serif"
             android:textColor="#effeff"/>
+
     </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,133 @@
+commit e1f735aa3e2fbd8142385157193efa477a0444a1
+Author: aliang30 <aliang30@binghamton>
+Date:   Thu Sep 5 14:20:57 2019 -0400
+
+    Added more buttons + made some small changes to the appearance of the app
+
+ .../com/example/myapplication/MainActivity.java    | 10 +++
+ .../com/example/myapplication/UnitConverter.java   |  9 +++
+ app/src/main/res/layout/content_main.xml           | 73 +++++++++++++++-------
+ app/src/main/res/values/colors.xml                 |  3 +-
+ app/src/main/res/values/strings.xml                |  1 -
+ 5 files changed, 69 insertions(+), 27 deletions(-)
+
+commit 2968b951b978033b8d90ffb7df1608ea0f1f931c
+Author: aliang30 <aliang30@binghamton>
+Date:   Wed Sep 4 22:49:41 2019 -0400
+
+    Added more radio buttons/options + modified bars
+
+ .../com/example/myapplication/MainActivity.java    | 13 +++++-
+ .../com/example/myapplication/UnitConverter.java   |  8 ++++
+ app/src/main/res/layout/content_main.xml           | 48 +++++++++++++++-------
+ app/src/main/res/menu/menu_main.xml                |  2 +-
+ app/src/main/res/values/colors.xml                 | 12 ++++--
+ app/src/main/res/values/strings.xml                |  9 ++--
+ app/src/main/res/values/styles.xml                 |  5 +++
+ 7 files changed, 74 insertions(+), 23 deletions(-)
+
+commit 8134812ee0dbd86834986b0ee881a5bfbab8ec15
+Author: aliang30 <aliang30@binghamton>
+Date:   Tue Sep 3 13:44:20 2019 -0400
+
+    radio button functionality implemented + modifed layout
+
+ .../com/example/myapplication/MainActivity.java    |  40 +++++-
+ .../res/{drawable => drawable-v24}/background2.jpg | Bin
+ app/src/main/res/layout/content_main.xml           | 136 ++++++++++-----------
+ 3 files changed, 102 insertions(+), 74 deletions(-)
+
+commit 4cfd2e33e2995e2b18ce880c8f9b9db6ea251b2b
+Author: aliang30 <aliang30@binghamton>
+Date:   Tue Sep 3 03:19:22 2019 -0400
+
+    Modified design by adding radio buttons and improved background
+
+ app/src/main/AndroidManifest.xml                   |   4 +-
+ .../com/example/myapplication/UnitConverter.java   |  16 +++--
+ app/src/main/res/drawable/background2.jpg          | Bin 53321 -> 253664 bytes
+ app/src/main/res/layout/activity_main.xml          |   7 --
+ app/src/main/res/layout/content_main.xml           |  79 +++++++++------------
+ app/src/main/res/values/styles.xml                 |   2 +-
+ 6 files changed, 50 insertions(+), 58 deletions(-)
+
+commit 42785c4229aa71b9b410044e5facec4f2a531f58
+Author: aliang30 <aliang30@binghamton>
+Date:   Mon Sep 2 23:05:57 2019 -0400
+
+    Modified layout
+
+ .../com/example/myapplication/MainActivity.java    |   4 +
+ .../com/example/myapplication/UnitConverter.java   |   8 ++
+ app/src/main/res/layout/activity_main.xml          |  12 ++-
+ app/src/main/res/layout/content_main.xml           | 106 +++++++++++++++++++--
+ 4 files changed, 115 insertions(+), 15 deletions(-)
+
+commit f8a644232f37a0c56846d463b7b94e1a393cb6da
+Author: aliang30 <aliang30@binghamton>
+Date:   Mon Sep 2 23:02:35 2019 -0400
+
+    Modified layout
+
+ app/src/main/java/com/example/myapplication/UnitConverter.java | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+commit f94e0741b4b47ca6131ba99052481b9785bdd79e
+Author: aliang30 <aliang30@binghamton>
+Date:   Sun Sep 1 15:58:23 2019 -0400
+
+    Button code implementation
+
+ .idea/vcs.xml                             |   6 ++++++
+ app/src/main/res/drawable/background2.jpg | Bin 0 -> 53321 bytes
+ 2 files changed, 6 insertions(+)
+
+commit 109be2f43f8ec44a1c1326a0b738f1a353ad658c
+Author: aliang30 <aliang30@binghamton>
+Date:   Thu Aug 29 01:02:15 2019 -0400
+
+    first commit
+
+ .gitignore                                         |  14 ++
+ .idea/.name                                        |   1 +
+ .idea/codeStyles/Project.xml                       | 116 ++++++++++++++
+ .idea/gradle.xml                                   |  16 ++
+ .idea/misc.xml                                     |   9 ++
+ .idea/runConfigurations.xml                        |  12 ++
+ app/.gitignore                                     |   1 +
+ app/build.gradle                                   |  30 ++++
+ app/proguard-rules.pro                             |  21 +++
+ .../myapplication/ExampleInstrumentedTest.java     |  27 ++++
+ app/src/main/AndroidManifest.xml                   |  24 +++
+ .../com/example/myapplication/MainActivity.java    |  56 +++++++
+ .../res/drawable-v24/ic_launcher_foreground.xml    |  34 ++++
+ app/src/main/res/drawable/background.jpg           | Bin 0 -> 3310 bytes
+ .../main/res/drawable/ic_launcher_background.xml   | 170 ++++++++++++++++++++
+ app/src/main/res/layout/activity_main.xml          |  39 +++++
+ app/src/main/res/layout/content_main.xml           |  28 ++++
+ app/src/main/res/menu/menu_main.xml                |  10 ++
+ app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml |   5 +
+ .../res/mipmap-anydpi-v26/ic_launcher_round.xml    |   5 +
+ app/src/main/res/mipmap-hdpi/ic_launcher.png       | Bin 0 -> 2963 bytes
+ app/src/main/res/mipmap-hdpi/ic_launcher_round.png | Bin 0 -> 4905 bytes
+ app/src/main/res/mipmap-mdpi/ic_launcher.png       | Bin 0 -> 2060 bytes
+ app/src/main/res/mipmap-mdpi/ic_launcher_round.png | Bin 0 -> 2783 bytes
+ app/src/main/res/mipmap-xhdpi/ic_launcher.png      | Bin 0 -> 4490 bytes
+ .../main/res/mipmap-xhdpi/ic_launcher_round.png    | Bin 0 -> 6895 bytes
+ app/src/main/res/mipmap-xxhdpi/ic_launcher.png     | Bin 0 -> 6387 bytes
+ .../main/res/mipmap-xxhdpi/ic_launcher_round.png   | Bin 0 -> 10413 bytes
+ app/src/main/res/mipmap-xxxhdpi/ic_launcher.png    | Bin 0 -> 9128 bytes
+ .../main/res/mipmap-xxxhdpi/ic_launcher_round.png  | Bin 0 -> 15132 bytes
+ app/src/main/res/values/colors.xml                 |   6 +
+ app/src/main/res/values/dimens.xml                 |   3 +
+ app/src/main/res/values/strings.xml                |   4 +
+ app/src/main/res/values/styles.xml                 |  20 +++
+ .../com/example/myapplication/ExampleUnitTest.java |  17 ++
+ build.gradle                                       |  27 ++++
+ gradle.properties                                  |  20 +++
+ gradle/wrapper/gradle-wrapper.jar                  | Bin 0 -> 54329 bytes
+ gradle/wrapper/gradle-wrapper.properties           |   6 +
+ gradlew                                            | 172 +++++++++++++++++++++
+ gradlew.bat                                        |  84 ++++++++++
+ settings.gradle                                    |   2 +
+ 42 files changed, 979 insertions(+)

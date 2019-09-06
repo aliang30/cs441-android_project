@@ -43,15 +43,7 @@ public class MainActivity extends AppCompatActivity {
         pounds2Kilos = (RadioButton)findViewById(R.id.fromPoundstoKilos);
         kilos2Pounds = (RadioButton)findViewById(R.id.fromKilostoPounds);
 
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //For bottom text
-                Snackbar.make(view, "Hello", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+
     }
 
     //Do something when button is clicked
