@@ -2,10 +2,10 @@
 
 <resources>
     <!-- Title Bar -->
-    <color name = "colorPrimary" >#FF9800</color>
+    <color name = "colorPrimary" >#13A237</color>
     <!-- Status Bar -->
-    <color name = "colorPrimaryDark">#F0B855</color>
+    <color name = "colorPrimaryDark">#307A0E</color>
     <!-- Button colors. -->
-    <color name = "colorAccent"> #e89717 </color>
+    <color name = "colorAccent">#459108</color>
 
 </resources>
